@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root {
+    --navbar-height: 59px;
+}
+
+/* Navigation Bar */
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color: rgba(19, 19, 19, 0.7);
+    z-index: 1000;
+    padding: 10px 20px;
+}
+
+#logo {
+    margin-left: 30px;
+}
+
+#logo img {
+    height: 59px;
+    border-radius: 300px;
+}
+
+/* Navigation List */
+#navbar ul {
+    display: flex;
+    align-items: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+#navbar ul li {
+    list-style: none;
+    font-size: 1.6rem;
+    margin: 0 15px;
+}
+
+#navbar ul .signup {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a {
+    color: white;
+    display: block;
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+#navbar ul li a:hover {
+    color: rgb(251, 248, 248);
+    background-color: rgb(230, 14, 14);
+}
+
+/* Home Section */
+#home {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(252, 249, 249);
+    position: relative;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    background: url('backround.jpg') no-repeat center center/cover;
+    inset: 0;
+    z-index: -1;
+    opacity: 0.89;
+}
+
+#home h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3rem;
+}
+
+#home p {
+    font-size: 1.5rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin-top: 20px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: white;
+    color: brown;
+}
+
+/* Services Section */
+#services {
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#services .box {
+    border: 2px solid rgb(32, 69, 193);
+    padding: 25px;
+    margin: 10px;
+    border-radius: 20px;
+    background: #f2f2f2;
+    text-align: center;
+    width: 300px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+#services .box img {
+    border-radius: 10px;
+    height: 160px;
+    margin-bottom: 15px;
+}
+
+#services .box h2 {
+    font-family: 'Bree Serif', serif;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+#services .box p {
+    font-family: 'Bree Serif', serif;
+    font-size: 1rem;
+    color: #333;
+    
+}
+
+/* fruits Section */
+#fruits-section {
+    position: relative;
+    padding: 50px 0px; 
+    text-align: center;
+    height: 400px;
+  }
+  
+  #fruits-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('fruit\ page\ .jpg') no-repeat center center/cover; /* Aligns to top-left */
+    z-index: -1;
+    opacity: 0.3;
+  }
+  
+  #fruits {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+.fruits-item img {
+    border-radius: 10px;
+    height: 124px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.fruits-item img:hover {
+    transform: scale(1.1);
+}
+
+/* Contact Section */
+#contact {
+    position: relative;
+    padding: 50px 0;
+    text-align: center;
+}
+#client-section, #contact {
+    background: rgba(0, 0, 0, 0.413) ('fruits.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    min-height: 400px; /* Adjust based on your needs */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+  }
+  
+#contact::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.687) url('fruits.jpg') no-repeat center center/cover;
+}
+
+#contact-box {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0px 10px 10px rgba(255, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e32424;
+    border-radius: 5px;
+}
+
+.button {
+    width: 100%;
+    background: rgb(163, 5, 5);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#contact-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#contact-box form {
+   
+    background: rgb(255, 255, 255);
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(154, 28, 28, 0.1);
+    border-radius: 10px;
+}
+
+#contact-box label {
+    font-size: 1.3rem;
+    font-family: 'Bree Serif', serif;
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+#contact-box input,
+#contact-box textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    margin-bottom: 9px;
+}
+
+#contact-box button {
+    background-color: brown;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border:none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#contact-box button:hover {
+    background-color: darkred;
+}
+
+/* Footer */
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 1rem;
+}
+
+/* Utility Classes */
+.h-primary {
+    font-family: 'Bree Serif', serif;
+    font-size: 3.5rem;
+    padding: 12px;
+}
+
+.h-secondary {
+    font-family: 'Bree Serif', serif;
+    font-size: 2.3rem;
+    padding: 12px;
+}
+
+.center {
+    text-align: center;
+}
+
